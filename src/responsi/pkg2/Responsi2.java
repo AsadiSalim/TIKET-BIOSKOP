@@ -6,8 +6,9 @@
 package responsi.pkg2;
 
 import static com.sun.org.apache.xalan.internal.lib.ExsltStrings.split;
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 /**
  *
@@ -19,7 +20,7 @@ public class Responsi2 {
      * @param args the command line arguments
      */
     // TODO code application logic here
-   public static void main(String[] args) {
+     public static void main(String[] args) {
         menu_awal();
     }
 
@@ -101,10 +102,11 @@ public class Responsi2 {
         System.out.println("");
         System.out.print("Jumlah Kursi : ");
         int kursi = sc.nextInt();
-
+        
         int total = kursi * harga;
         System.out.println("===============================");
         System.out.println(" Judul Film\t: " + judul[(pilih_judul - 1)]);
+        System.out.println(" Studio\t: " + pilih_judul);
         System.out.println(" Jadwal Film\t: " + jadwal[(pilih_jadwal - 1)]);
         System.out.println(" Kursi\t: " + kursi);
         System.out.println(" Total Bayar\t: " + total);
