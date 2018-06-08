@@ -34,6 +34,7 @@ public class Responsi2 {
 
     public static void menu_awal() {
         int pilih_menu;
+        ulang = 'S';
         do {
             System.out.println("========== Bioskop XXI ==========");
             System.out.println("1.\tJudul Film");
@@ -127,7 +128,7 @@ public class Responsi2 {
         int total = kursi * harga;
         System.out.println("===============================");
         System.out.println(" Judul Film\t: " + judul[(pilih_judul - 1)]);
-        System.out.println(" Studio\t\t: " + pilih_judul);
+        System.out.println(" Studio\t\t: " + studio);
         System.out.println(" Jadwal Film\t: " + jadwal[(pilih_jadwal - 1)]);
         System.out.println(" Kursi\t\t: " + kursi);
         System.out.println(" Total Bayar\t: " + total);
