@@ -97,7 +97,7 @@ public class Responsi2 {
         }
         System.out.print("Pilih : ");
         int pilih_jadwal = sc.nextInt();
-        int kapasitas = sc.nextInt();
+        int kapasitas = 0;
         System.out.println("Pilih Studio (1-3) : ");
         int studio = sc.nextInt();
         switch (studio) {
@@ -127,9 +127,9 @@ public class Responsi2 {
         int total = kursi * harga;
         System.out.println("===============================");
         System.out.println(" Judul Film\t: " + judul[(pilih_judul - 1)]);
-        System.out.println(" Studio\t: " + pilih_judul);
+        System.out.println(" Studio\t\t: " + pilih_judul);
         System.out.println(" Jadwal Film\t: " + jadwal[(pilih_jadwal - 1)]);
-        System.out.println(" Kursi\t: " + kursi);
+        System.out.println(" Kursi\t\t: " + kursi);
         System.out.println(" Total Bayar\t: " + total);
         System.out.println("===============================");
         System.out.print(" Bayar\t: ");
@@ -137,12 +137,10 @@ public class Responsi2 {
         if (bayar < total) {
             System.out.println("Maaf, Uang anda kurang");
         } else {
-            int kembalian = sc.nextInt();
-            kembalian = bayar - total;
+            int kembalian = bayar - total;
             System.out.println(" Kembalian\t: " + kembalian);
         }
         System.out.println("");
 
     }
 }
-
