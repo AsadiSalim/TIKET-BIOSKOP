@@ -9,7 +9,6 @@ import static com.sun.org.apache.xalan.internal.lib.ExsltStrings.split;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
 /**
  *
  * @author AGUSTINA
@@ -20,7 +19,7 @@ public class Responsi2 {
      * @param args the command line arguments
      */
     // TODO code application logic here
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         menu_awal();
     }
 
@@ -98,11 +97,33 @@ public class Responsi2 {
         }
         System.out.print("Pilih : ");
         int pilih_jadwal = sc.nextInt();
-
+        int kapasitas = sc.nextInt();
+        System.out.println("Pilih Studio (1-3) : ");
+        int studio = sc.nextInt();
+        switch (studio) {
+            case 1:
+                kapasitas = 30;
+                break;
+            case 2:
+                kapasitas = 35;
+                break;
+            case 3:
+                kapasitas = 40;
+                break;
+        }
         System.out.println("");
-        System.out.print("Jumlah Kursi : ");
-        int kursi = sc.nextInt();
-        
+        int kursi;
+
+        do {
+            System.out.println("Jumlah Kursi : ");
+            System.out.println("");
+            kursi = sc.nextInt();
+            if (kursi > kapasitas) {
+                System.out.println("jumlah kursi yang dipesen melebihi kapasitas yang tersedia."
+                        + "Ulangi memasukkan jumlah kursi.");
+            }
+        } while (kursi > kapasitas);
+
         int total = kursi * harga;
         System.out.println("===============================");
         System.out.println(" Judul Film\t: " + judul[(pilih_judul - 1)]);
@@ -113,9 +134,15 @@ public class Responsi2 {
         System.out.println("===============================");
         System.out.print(" Bayar\t: ");
         int bayar = sc.nextInt();
-        int kembalian = bayar - total;
-        System.out.println(" Kembalian\t: " + kembalian);
-
+        if (bayar < total) {
+            System.out.println("Maaf, Uang anda kurang");
+        } else {
+            int kembalian = sc.nextInt();
+            kembalian = bayar - total;
+            System.out.println(" Kembalian\t: " + kembalian);
+        }
         System.out.println("");
+
     }
 }
+
