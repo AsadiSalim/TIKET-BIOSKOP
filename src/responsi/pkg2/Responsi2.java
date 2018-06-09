@@ -60,6 +60,8 @@ public class Responsi2 {
                 default:
                     System.out.println("Inputan salah!");
             }
+            System.out.print("ingin kembali ke menu awal ?(Y/T) ");
+            ulang = sc.next().charAt(0);
         } while (ulang == 'Y' || ulang == 'y');
     }
 
@@ -68,8 +70,7 @@ public class Responsi2 {
         for (int x = 0; x < judul.length; x++) {
             System.out.println((x + 1) + "\t| " + judul[x]);
         }
-        System.out.print("ingin kembali ke menu awal ?(Y/T) ");
-        ulang = sc.next().charAt(0);
+
     }
 
     public static void jadwal_film() {
@@ -77,8 +78,7 @@ public class Responsi2 {
         for (int x = 0; x < jadwal.length; x++) {
             System.out.println((x + 1) + "   | " + jadwal[x]);
         }
-        System.out.print("ingin kembali ke menu awal ?(Y/T) ");
-        ulang = sc.next().charAt(0);
+      
     }
 
     public static void transaksi() {
