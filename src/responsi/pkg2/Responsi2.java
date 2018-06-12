@@ -134,13 +134,20 @@ public class Responsi2 {
         System.out.println(" Total Bayar\t: " + total);
         System.out.println("===============================");
         System.out.print(" Bayar\t: ");
-        int bayar = sc.nextInt();
-        if (bayar < total) {
+        int bayar = 0;
+        do{
+            bayar = sc.nextInt();
+            if (bayar < total) {
             System.out.println("Maaf, Uang anda kurang");
-        } else {
+                System.out.println(" Bayar\t: ");
+            } else {
+            }
+        }while (bayar < total);
+           
+                   
             int kembalian = bayar - total;
             System.out.println(" Kembalian\t: " + kembalian);
-        }
+        
         System.out.println("");
 
     }
